@@ -1,5 +1,6 @@
 package Test;
 
+import Pages.CheckoutPage;
 import Pages.ProductPage;
 import Pages.RegisterPage;
 import Pages.ShopPage;
@@ -16,6 +17,7 @@ public class TestCases {
     RegisterPage customers;
     ProductPage users;
     ShopPage shop;
+    CheckoutPage check;
 
     @BeforeMethod
     public void RunFirst(){
@@ -25,6 +27,7 @@ public class TestCases {
         customers = new RegisterPage(driver);
         users=new ProductPage(driver);
         shop=new ShopPage(driver);
+        check=new CheckoutPage(driver);
         driver.manage().window().maximize();
     }
 
@@ -34,20 +37,25 @@ public class TestCases {
     }
 
     @Test
+    public void Login(){
+        customers.Logging();
+    }
+
+    @Test
     public void NewRegister(){
         customers.NewRegisterUser();
     }
 
 
-    @Test
-    public void Logout(){
-        customers.LogoutUser();
-    }
+//    @Test
+//    public void Logout(){
+//        customers.LogoutUser();
+//    }
 
-    @Test
-    public void Invalid(){
-        customers.WrongUser();
-    }
+//    @Test
+//    public void Invalid(){
+//        customers.WrongUser();
+//    }
 
     @Test
     public void Searching(){
@@ -83,6 +91,18 @@ public class TestCases {
     public void ClearCart(){
         shop.EmptyCart();
     }
+
+    @Test
+    public void SeeCart(){
+        shop.ViewCart();
+    }
+
+//    @Test
+//    public void Delivery(){
+//        shop.ViewCart();
+//
+//    }
+
     @AfterMethod
     public void RunLast(){
         driver.quit();

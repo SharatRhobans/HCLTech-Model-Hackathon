@@ -35,9 +35,16 @@ public class RegisterPage {
         WebElement element1 = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.className("btn-primary"))
         );
+    }
+
+    public void Logging(){
+
+        driver.findElement(By.className("dropdown")).click();
+        driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[2]/a")).click();
         driver.findElement(By.className("list-group-item")).click();
         driver.findElement(By.id("input-email")).sendKeys("sharat@gmail.com");
         driver.findElement(By.id("input-password")).sendKeys("Sharat@9876");
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/input")).click();
     }
 
     public void NewRegisterUser(){
@@ -68,10 +75,6 @@ public class RegisterPage {
         driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/input")).click();
         driver.findElement(By.className("dropdown")).click();
         driver.findElement(By.xpath("//a[text()='Logout']")).click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[5]/a"))
-        );
     }
 
     public void WrongUser(){
