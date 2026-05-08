@@ -241,34 +241,34 @@ a.Authentication Module:
 - Verify user logout functionality
 - Verify new user registration
 
-b.Product Module
+b.Product Module:
 
 - Search products using keywords
 - Verify product details and pricing
 - Validate category navigation
 - Verify no-results message for invalid searches
 
-c.Shopping Cart Module
+c.Shopping Cart Module:
 
 - Add products to cart
 - Update product quantity in cart
 - Remove products from cart
 - Verify cart item count updates correctly
 
-d.Checkout Module
+d.Checkout Module:
 
 - Complete checkout process successfully
 - Verify delivery details validation
 - Confirm order placement functionality
 - Verify login is required before checkout
 
-e.Form Validation Module
+e.Form Validation Module:
 
 - Validate empty field error messages
 - Verify invalid email validation
 - Validate mandatory checkout fields
 
 
-17.Conclusion
+17.Conclusion:
 
 The NinjaShop Selenium Java Automation Framework successfully automates the major functionalities of a demo e-commerce application using industry-standard automation practices.The framework is designed to be scalable, reusable, and easy to maintain by following the Page Object Model architecture, proper configuration management, reporting integration, and reusable utility implementation.
